@@ -12,7 +12,5 @@ void loop() {
   int soil = analogRead(A0);  // 아날로그 데이터를 soil로 저장
   Serial.println(soil);      // 아날로그값 시리얼로 출력
   delay(500);
-  if (Serial.available()) {
-    mySerial.write(soil);
-   }
-}
+  mySerial.println(soil);
+} 
