@@ -1,4 +1,4 @@
-#include <SoftwareSerial.h>
+  #include <SoftwareSerial.h>
 int Tx = 5;
 int Rx = 6;
 
@@ -13,6 +13,6 @@ void loop() {
   Serial.println(soil);      // 아날로그값 시리얼로 출력
   delay(500);
   if (Serial.available()) {
-    mySerial.println(soil);
+    mySerial.write(soil);
    }
 }
